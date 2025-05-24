@@ -7,6 +7,28 @@ body {
 
 p { padding: 0;}
 
+nav {
+  background-color: #303030;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -37,28 +59,6 @@ main h1{
 main p{
   flex-grow: 1; 
   margin-top: 1rem;
-}
-
-nav {
-  background-color: #303030;
-  padding: 1rem;
-  text-align: center;
-  width: 100%;
-}
-
-nav a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: bold;
-  padding: 0.5rem;
-  border-radius: 8px;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 h1 {
