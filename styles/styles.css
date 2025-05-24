@@ -1,0 +1,119 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+p { padding: 0;}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 60%;
+  padding-top: 2rem;
+  display: flex;
+}
+
+main img {
+  width: 30%;
+  height: auto;
+}
+
+.main-text { 
+  flex-grow: 1; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+main h1{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+main p{
+  flex-grow: 1; 
+  margin-top: 1rem;
+}
+
+nav {
+  background-color: #303030;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+h1 {
+  font-size: 2rem;
+  color: #222;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+aside {
+  width: 60%;
+  margin: 1rem;
+  border: 1px solid rgb(0 0 0 / 0.2);
+  padding: 1rem;
+  background-color: #eeeeee;
+  color: #333;
+  display: flex;
+  align-items: flex-start; 
+  gap: 1.5rem;
+}
+
+aside img {
+  width: 200px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+aside > div { 
+  flex-grow: 1; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+aside h2{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+aside p{
+  flex-grow: 1; 
+  padding: 0;
+  margin: 0;
+}
+
+aside, main img {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+aside, main img, aside img {
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #303030;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%; 
+}
