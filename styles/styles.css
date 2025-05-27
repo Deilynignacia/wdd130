@@ -41,6 +41,8 @@ main {
   display: flex;
 }
 
+main{ max-width: 850px;}
+
 main img {
   width: 30%;
   height: auto;
