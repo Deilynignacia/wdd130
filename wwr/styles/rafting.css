@@ -10,16 +10,15 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
+  overflow-x: hidden;
 }
 
 main, footer {
-  width: 100%;
   margin: 0 auto;
 }
 
@@ -55,7 +54,7 @@ nav {
 
 nav a {
   background-color: var(--secondary-color);
-  color: white;
+  color: var(--primary-color);
   padding: 0.4rem 0.8rem;
   border-radius: 9999px;
   text-decoration: none;
@@ -69,9 +68,13 @@ nav a:hover {
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-nav, p, section, article {
-  margin: 16px;
+p {
   padding: 8px;
+}
+
+section, article {
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 h1, h2 {
@@ -113,7 +116,6 @@ h1, h2 {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  opacity: 0.7;
 }
 
 .hero article img {
@@ -124,7 +126,7 @@ h1, h2 {
 }
 
 article p, section p {
-  background-color: rgba(243, 240, 234, 0.8);
+  background-color: transparent;
   padding: 1rem;
   border-left: 4px solid var(--secondary-color);
   border-radius: 4px;
@@ -198,7 +200,6 @@ article p, section p {
 .scroll-gallery figcaption {
   margin-top: 0.5rem;
   font-weight: bold;
-  color: var(--primary-color);
 }
 
 footer {
@@ -215,6 +216,29 @@ footer p {
   text-align: center;
 }
 
+.wireframe {
+  grid-column: 1 / 2;
+  justify-self: start;
+  padding-left: 1rem;
+}
+
+.wireframe a {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.wireframe a:hover {
+  background-color: var(--accent1-color);
+  color: white;
+}
+
 .socialmedia {
   grid-column: 3 / 4;
   justify-self: end;
@@ -224,4 +248,155 @@ footer p {
 footer img {
   width: 1.8rem;
   margin-left: 0.5rem;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+  background-color: rgba(243, 240, 234, 0.6);
+  border-top: 4px solid var(--secondary-color);
+  border-bottom: 4px solid var(--secondary-color);
+  color: var(--accent1-color);
+}
+
+.message {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  border-left: none;
+}
+
+.contact-details {
+  padding: 1rem;
+}
+
+.contact-details h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-details ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.contact-details li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+
+.map iframe {
+  width: 90%;
+  height: 100%;
+  min-height: 300px;
+  border: none;
+  border-radius: 8px;
+}
+
+.employees {
+  background-color: rgba(243, 240, 234, 0.6);
+  text-align: center;
+}
+
+.employees h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding-bottom: 1.5rem;
+}
+
+.employee-grid figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+}
+
+.employee-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  margin-bottom: 0.5rem;
+}
+
+.contact-form {
+  padding: 2rem;
+  background-color: rgba(243, 240, 234, 0.8);
+  width: 100%;
+}
+
+.contact-form h2 {
+  text-align: center;
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-left, .form-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-left h3 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--accent1-color);
+}
+
+
+textarea, input[type="text"],
+input[type="email"] {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.form-bottom {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.subscription {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+button[type="submit"] {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--accent1-color);
 }
